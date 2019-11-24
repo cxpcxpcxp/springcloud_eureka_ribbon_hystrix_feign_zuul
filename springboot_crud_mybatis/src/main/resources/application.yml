@@ -1,0 +1,32 @@
+server:
+  port: 8899
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #如果报红将pom.xml里面的mysql依赖的scope runtime注释掉
+#    url: jdbc:mysql://192.168.0.101:3307/springboot
+    url: jdbc:mysql://localhost:3306/ssm?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+#    password: 123456
+    password: 771003
+#    schema:
+#      - classpath:ssm.sql
+    initialization-mode: always
+    # springboot项目加载的时候，自动执行这些脚本文件
+#    druid数据源的相关配置
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
