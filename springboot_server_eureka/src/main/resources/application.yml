@@ -1,0 +1,10 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: server-eureka
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://127.0.0.1:${server.port}/eureka
+      defaultZone: http://127.0.0.1:10087/eureka #高可用并发eureka

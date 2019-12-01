@@ -1,0 +1,16 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: server-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+zuul:
+  routes:
+    server-provider: /server-provider/**
+    server-consumer: /server-consumer/**
+#      path: /server-provider/**
+#      url: http://127.0.0.1:8891
+#      serviceId: server-provider  #指定服务名称  负载均衡

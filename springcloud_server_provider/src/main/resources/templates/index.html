@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<form action="/product/findAll" method="post">
+    <input type="submit" value="(springcloud)查看所有产品">
+</form>
+<br>
+<h4>------------------------------------------------------</h4>
+<!--12B7ABF2A4C544568B0A7C69F36BF8B7-->
+<form action="/product/findById/${id}" method="get">
+    <input type="submit" value="(springcloud)根据id查询产品">
+</form>
+</body>
+</html>
