@@ -3,7 +3,11 @@
 
 # Log file
 *.log
+<<<<<<< HEAD
 .iml
+=======
+
+>>>>>>> b8de8374133a220c137e5ee1911234c8649671ec
 # BlueJ files
 *.ctxt
 
@@ -21,4 +25,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 #
+=======
+>>>>>>> b8de8374133a220c137e5ee1911234c8649671ec
